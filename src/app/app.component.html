@@ -1,4 +1,10 @@
 <h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<!-- <app-heroes></app-heroes> -->
+<!--主页上显示一个连接，指向英雄页-->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a> | 
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
 <!--消息模块添加到底端-->
 <app-messages></app-messages>

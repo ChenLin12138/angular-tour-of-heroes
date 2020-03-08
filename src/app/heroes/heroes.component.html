@@ -1,10 +1,13 @@
 <h2>My Heros</h2>
+<!--将badge和名字包裹进<a>，那么通过点击badge也能跳转到某个英雄的详情-->
 <ul class="heroes">
-    <li *ngFor = "let hero of heroes" [class.selected] = "hero === selectedHero" (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>{{hero.name}}
+    <li *ngFor = "let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span>{{hero.name}}
+        </a>  
     </li>
 </ul>
 
 <!--把HeroesComponent.selectedHero绑定到该元素的hero属性-->
 <!--将父组件中的selectedHero传递给app-hero-detail子组件的hero属性-->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

@@ -13,7 +13,7 @@ export class HeroesComponent implements OnInit {
 
   heroes :  Hero[];
 
-  selectedHero : Hero;
+  // selectedHero : Hero;
 
   //注入HeroService和MessageService
   constructor(private heroService : HeroService, private messageService : MessageService) { }
@@ -22,10 +22,10 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  onSelect(hero : Hero) : void{
-    this.selectedHero = hero;
-    this.messageService.add(`HeroService: Selected hero id = ${hero.id}`);
-  }
+  // onSelect(hero : Hero) : void{
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroService: Selected hero id = ${hero.id}`);
+  // }
 
   getHeroes() : void {
     //异步数据传输
