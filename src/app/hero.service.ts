@@ -10,7 +10,9 @@ import { MessageService } from './message.service';
 })
 export class HeroService {
 
-  constructor(private messageService : MessageService ) { }
+  //注入消息服务
+  //以公共属性注入,因为我们会在模板中绑定它
+  constructor(public messageService : MessageService ) { }
 
   getHeroes() : Observable<Hero[]> {
     this.messageService.add('HeroService: Fetch heroes');

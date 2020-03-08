@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
 
   selectedHero : Hero;
 
+  //注入HeroService和MessageService
   constructor(private heroService : HeroService, private messageService : MessageService) { }
 
   ngOnInit(): void {
@@ -27,6 +28,7 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes() : void {
+    //异步数据传输
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
