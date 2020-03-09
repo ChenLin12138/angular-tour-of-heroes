@@ -1,5 +1,14 @@
 <h2>My Heros</h2>
 <!--将badge和名字包裹进<a>，那么通过点击badge也能跳转到某个英雄的详情-->
+<div>
+    <label>
+        Hero name : <input #heroName />
+    </label>
+    <button (click)="add(heroName.value); heroName.value=''">
+        add
+    </button>
+</div>
+
 <ul class="heroes">
     <li *ngFor = "let hero of heroes">
         <a routerLink="/detail/{{hero.id}}">
