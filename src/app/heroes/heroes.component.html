@@ -4,6 +4,8 @@
     <label>
         Hero name : <input #heroName />
     </label>
+    <!--表达式中的上下文是由模板变量，上下文和组件成员叠加而成-->
+    <!--#heroName定义模板变量，并且使用heroName.value传入add方法中-->
     <button (click)="add(heroName.value); heroName.value=''">
         add
     </button>
